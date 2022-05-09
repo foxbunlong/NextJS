@@ -1,23 +1,63 @@
 <html>
   <body>
     <div id="app"></div>
-    <script type="text/javascript">
+
+    <!-- Library -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
       // Select the div element with 'app' id
       const app = document.getElementById("app");
 
-      // Create a new H1 element
-      const header = document.createElement("h1");
+      function createTitle(title) {
+        if (title) {
+          return title;
+        } else {
+          return "Default title";
+        }
+      }
 
-      // Create a new text node for the H1 element
-      const headerContent = document.createTextNode(
-        "Develop. Preview. Ship. 🚀"
-      );
+      // Need capitalized
+      function Header({ title }) {
+        console.log(title);
+        return <h1>{`Cool ${title ? title : "Default value"}`}</h1>;
+      }
 
-      // Append the text to the H1 element
-      header.appendChild(headerContent);
+      function HomePage() {
+        const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
+        const [likes, setLikes] = React.useState(0);
 
-      // Place the H1 element inside the div
-      app.appendChild(header);
+        function handleClick() {
+          console.log("increment like count");
+          setLikes(likes + 1);
+          // let currentLikes = likes;
+          // setLikes(currentLikes++);
+        }
+
+        return (
+          <div>
+            {/* Nesting the Header component */}
+            <Header title="React 💙" />
+            <Header title="Develop. Preview. Ship. 🚀" />
+            <Header />
+
+            {/* Populate list of data */}
+            <ul>
+              {names.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+
+            {/* Interact using state */}
+            <button onClick={handleClick}>Like {likes}</button>
+          </div>
+        );
+      }
+
+      // React part
+      ReactDOM.render(<HomePage />, app); // React components using angle brackets
     </script>
   </body>
 </html>

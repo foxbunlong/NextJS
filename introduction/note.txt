@@ -1,0 +1,9 @@
+// Create package.json file with empty brackets. Then run this command
+npm install react react-dom next
+
+// Change name of index.html to index.jsx
+// Move index file to pages directory
+
+// Add scripts to package.json
+// Run command to start server
+npm run dev

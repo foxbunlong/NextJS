@@ -32,3 +32,8 @@ npm install -D sass // Support to use scss and sass
 npm install gray-matter
 
 // Assigned name folders: <root>/pages
+
+// Server-side rendering using getServerSideProps
+// getServerSideProps runs at request time so time to first byte (TTFB) will be slower than getStaticProps
+
+// Client-side rendering - statically generate parts of the page at request time. Then when page loads, fetch the rest of data

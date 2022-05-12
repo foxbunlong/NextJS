@@ -14,3 +14,21 @@ npm run dev
 yarn add classnames // use to toggle classname easily
 npm install -D tailwindcss autoprefixer postcss // use for css
 npm install -D sass // Support to use scss and sass
+
+// hydration - Each generated HTML is associated with minimal JavaScript code necessary for that page. 
+// When a page is loaded by the browser, its JavaScript code runs and makes the page fully interactive.
+
+// Next support to choose pre-rendering form
+// - Static Generation
+// - Server-side rendering
+
+// export async function getStaticProps() -> call this in class to get data at build time (prefeching)
+// getStaticProps only runs on server-side
+// getStaticProps can only be exported from a page
+
+// 'posts' folder at root is not the same as 'pages/posts'
+
+// Library to parse markdown file
+npm install gray-matter
+
+// Assigned name folders: <root>/pages

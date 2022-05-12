@@ -9,3 +9,8 @@ npm install react react-dom next
 npm run dev
 
 // need to restart the development server when you add pages/_app.js.
+
+// Some useful library
+yarn add classnames // use to toggle classname easily
+npm install -D tailwindcss autoprefixer postcss // use for css
+npm install -D sass // Support to use scss and sass

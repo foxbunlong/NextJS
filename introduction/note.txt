@@ -68,3 +68,14 @@ yarn add remark remark-html
 
 // To format date
 yarn add date-fns
+
+// About fallback
+fallback: false // any path not returned by 'getStaticPaths' will result in 404 page
+fallback: true // Some changes:
+    - path returned by 'getStaticPaths' -> rendered to html at build time
+    - path not generated at build time will not result in 404 page but served as new path
+    - generate requested path
+fallback: blocking // new path will be server-side rendered with getStaticProps
+
+// Catch-all Routes
+// add ... inside brackets []

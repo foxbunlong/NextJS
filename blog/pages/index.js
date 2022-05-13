@@ -13,13 +13,14 @@ export async function getStaticProps() {
   };
 }
 
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      // props for your component
-    },
-  };
-}
+// This cannot use same time with getStaticProps or getStaticPaths
+// export async function getServerSideProps(context) {
+//   return {
+//     props: {
+//       // props for your component
+//     },
+//   };
+// }
 
 export default function Home({ allPostsData }) {
   return (

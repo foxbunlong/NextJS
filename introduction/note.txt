@@ -40,3 +40,31 @@ npm install gray-matter
 
 // SWR - Hooks for data fetching
 yarn add swr
+
+// Generated page's path will follow format: /posts/[id]
+// posts is top-level directory
+
+// File named as [id].js is defined as dynamic routes
+// getStaticPaths() => Return a list of possible value for id
+// getStaticProps({ params }) => Fetch necessary data for the blog post using params.id
+// To make [id].js to work, the returned value of function getStaticPaths should follow the pattern as:
+// [
+//   {
+//     params: {
+//       id: '<id 1>'
+//     }
+//   },
+//   {
+//     params: {
+//       id: '<id 2>'
+//     }
+//   }
+// ]
+
+// To render markdown content
+yarn add remark remark-html
+// remark inquired as async function
+// dangerouslySetInnerHTML - innerHTML in the browser DOM preventing cross-site scripting attack
+
+// To format date
+yarn add date-fns

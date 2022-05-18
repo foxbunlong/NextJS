@@ -8,6 +8,10 @@ import { getSortedPostsData } from "../lib/posts";
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
+    // redirect: {
+    //   destination: "https://google.com",
+    //   permanent: true,
+    // },
     props: {
       allPostsData,
     },
@@ -107,15 +111,7 @@ export default function Home({ allPostsData }) {
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+      <footer></footer>
 
       <style jsx>{`
         .container {

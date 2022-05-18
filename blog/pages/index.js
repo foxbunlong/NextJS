@@ -8,6 +8,10 @@ import { getSortedPostsData } from "../lib/posts";
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
+    // redirect: {
+    //   destination: "https://google.com",
+    //   permanent: true,
+    // },
     props: {
       allPostsData,
     },
@@ -33,7 +37,7 @@ export default function Home({ allPostsData }) {
 
       <Layout home>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{siteTitle} v2</title>
         </Head>
         <section className={utilStyles.headingMd}>
           <p>[Your Self Introduction]</p>

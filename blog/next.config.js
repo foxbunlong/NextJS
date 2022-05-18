@@ -3,7 +3,7 @@ const withOptimizedImages = require("next-optimized-images");
 module.exports = withOptimizedImages({
   images: {
     loader: "imgix",
-    path: "http://localhost:8888/",
+    path: "http://localhost:3000/",
   },
   exportPathMap: async function (
     defaultPathMap,
